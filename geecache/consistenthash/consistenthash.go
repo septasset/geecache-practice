@@ -13,8 +13,8 @@ type Hash func(data []byte) uint32
 type Map struct {
 	hash     Hash
 	replicas int
-	keys     []int // all hash values, Sorted
-	hashMap  map[int]string
+	keys     []int          // all hash values, Sorted
+	hashMap  map[int]string // key -> peer_name
 }
 
 // New creates a Map instance
